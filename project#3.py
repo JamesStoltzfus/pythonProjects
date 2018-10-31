@@ -1,27 +1,35 @@
 
-def searchC(word):
+text_main = ""
+
+
+def searchCount(word,text_main):
     pass
 
-def searchP(word):
+def searchPrint(word,text_main):
     pass
 
-def searchR(word):
+def searchReplace(word,text_main):
     pass
 
-def encode():
+def encode(text_main):
     pass
 
 def email():
     pass
 
+def inputF():
+    global text_main
+    inp = input("Input a file name. ex. \"filename\".txt \n")
+    try:
+        with open(imp+".txt", "r") as myFile:
+            text_main = myFile.read()
+            myFile.seek(0)
+    except NameError:
+        print("That file doesn't exist, try again?")
 
-inp = input("Input a file name. ex. \"filename\".txt \n")
-with open(imp+".txt", "r") as myFile:
-    text_main = myFile.read()
-    myFile.seek(0)
-
-
-
+print("Welcome to progron ")
+while True:
+    
 
 
 
