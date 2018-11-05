@@ -14,21 +14,28 @@ def searchReplace(word,text_main):
 def encode(text_main):
     pass
 
+def backups(text_main):
+    pass
+
 def email():
     pass
 
 def inputF():
     global text_main
-    inp = input("Input a file name. ex. \"filename\".txt \n")
-    try:
-        with open(imp+".txt", "r") as myFile:
-            text_main = myFile.read()
-            myFile.seek(0)
-    except NameError:
-        print("That file doesn't exist, try again?")
+    run = True
+    while run:
+        inp = input("Input a file name. ex. \"filename\".txt \n")
+        try:
+            with open(inp+".txt", "r") as myFile:
+                text_main = myFile.read()
+                myFile.seek(0)
+                run = False
+        except FileNotFoundError:
+            print("That file doesn't exist, try again?")
 
 print("Welcome to progron ")
 while True:
+    inputF()
     
 
 
@@ -41,5 +48,6 @@ while True:
 #4 Encode using caesar shift code and save as a file
 #5 Email a random section of text to a user input email address
 #6 One other feature of my choice
+    #saving backups
 #6v2 start running the guessing game lol
 #7 Quit with a farewell
